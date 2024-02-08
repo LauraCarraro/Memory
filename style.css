@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #fbb1db, #ffbacd, #ffc5c5, #ffd2c4, #ffdfca, #ffdfca, #ffdfca, #ffdfca, #ffd2c4, #ffc5c5, #ffbacd, #fbb1db);
+    height: 100vh;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+}
+.title {
+    color: rgb(6, 6, 6);
+    text-shadow: 1px 1px 1px white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#btn {
+    height: 40px;
+    width: 150px;
+    margin-top: 40px;
+    margin-left: 40px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+section {
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.card {
+    place-self: center;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px black;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform: rotateY(180deg); /* Initially flipped */
+}
+
+.front-face,
+.back-face {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px black;
+    position: absolute;
+}
+
+.front-face {
+    transform: rotateY(180deg); /* Initially hidden */
+}
+
+.card.flip {
+    transform: rotateY(0deg);
+}
+.front-face {
+    transform: rotateY(0deg); /* Initially hidden */
+}
+
+.card.flip .back-face {
+    display: none; /* backFace hidden when card is flipped */
+}
+
+.card.flip .front-face {
+    display: block; /* frontFace visible when card is flipped */
+}
