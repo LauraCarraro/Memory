@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top, #fbb1db, #ffbacd, #ffc5c5, #ffd2c4, #ffdfca, #ffdfca, #ffdfca, #ffdfca, #ffd2c4, #ffc5c5, #ffbacd, #fbb1db);
+    background-image: linear-gradient(to top, #fbb1db, #ffbacd, #ffc5c5, #ffd2c4, #ffdfca,#F9F3E9, #ffdfca, #ffdfca, #ffdfca, #ffd2c4, #ffc5c5, #ffbacd, #fbb1db);
     height: 100vh;
 }
 .header {

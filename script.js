@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Tableau des cartes retournées
 let flippedCards = []; 
 
-
 //Créer le tableau des cartes
 let cardData = [
     { imgSrc: 'images/biscuit.png', name: 'biscuit'},
@@ -52,7 +51,7 @@ let cardData = [
     
     let backFace = document.createElement('img');
     backFace.classList.add('back-face');
-    backFace.src = 'images/logo.png';
+    backFace.src = 'images/LAURA’S cake house.png';
     backFace.alt = 'Logo';
 
     newCard.appendChild(frontFace);
@@ -104,7 +103,10 @@ function updateScore() {
 scoreSpan.textContent = score;
   }
 // Remettre à jour le tableau des cartes retournées
-    flippedCards = []; 
+  setTimeout(() => {
+  flippedCards = [];
+  }, 500);
+  
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
@@ -113,3 +115,4 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 function match(){
   setTimeout
 }
+
