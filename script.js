@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let score = 0;
   let flippedCards = [];
 
-  //Créer le tableau des cartes
+//Créer le tableau des cartes
 let cardData = [
   { imgSrc: 'images/biscuit.png', name: 'biscuit'},
   { imgSrc: 'images/biscuit.png', name: 'biscuit'},
@@ -26,67 +26,67 @@ let cardData = [
   { imgSrc: 'images/gateauchoco.png', name: 'gateauchoco'},   
 ];
 
-  // Mélanger les cartes lors du rafraîchissement de la page
-  function randomize(cardData) {
-      cardData.sort(() => Math.random() - 0.5);
-      return cardData;
+// Mélanger les cartes lors du rafraîchissement de la page
+function randomize(cardData) {
+    cardData.sort(() => Math.random() - 0.5);
+    return cardData;
   }
 
-  function cardGenerator() {
-      cardData = randomize(cardData);
+function cardGenerator() {
+    cardData = randomize(cardData);
   }
 
 // Fonction pour recommencer le jeu
-  function restartGame() {
-      score = 0;
-      updateScore();
-      flippedCards = [];
+function restartGame() {
+    score = 0;
+    updateScore();
+    flippedCards = [];
 
 // Supprimer toutes les cartes existantes
-      while (section.firstChild) {
-          section.removeChild(section.firstChild);
+    while (section.firstChild) {
+        section.removeChild(section.firstChild);
       }
 
 // Générer et afficher de nouvelles cartes
-      cardGenerator();
-      createCards();
+    cardGenerator();
+    createCards(); 
   }
 
-  // Fonction pour créer les cartes dans le DOM
-  function createCards() {
-      cardData.forEach((card) => {
-          let newCard = document.createElement('div');
-          newCard.classList.add('card');
+// Fonction pour créer les cartes dans le DOM
+function createCards() {
+    cardData.forEach((card) => {
+        let newCard = document.createElement('div');
+        newCard.classList.add('card');
 
-          let frontFace = document.createElement('img');
-          frontFace.classList.add('front-face');
-          frontFace.src = card.imgSrc;
-          frontFace.alt = card.name;
+        let frontFace = document.createElement('img');
+        frontFace.classList.add('front-face');
+        frontFace.src = card.imgSrc;
+        frontFace.alt = card.name;
 
-          let backFace = document.createElement('img');
-          backFace.classList.add('back-face');
-          backFace.src = 'images/LAURA’S cake house.png';
-          backFace.alt = 'Logo';
+        let backFace = document.createElement('img');
+        backFace.classList.add('back-face');
+        backFace.src = 'images/LAURA’S cake house.png';
+        backFace.alt = 'Logo';
 
-          newCard.appendChild(frontFace);
-          newCard.appendChild(backFace);
+        newCard.appendChild(frontFace);
+        newCard.appendChild(backFace);
 
-          section.appendChild(newCard);
+        section.appendChild(newCard);
       });
 
  // Réinitialiser les gestionnaires d'événements pour les nouvelles cartes
-      addEventListenersToCards();
+    addEventListenersToCards();
   }
 
 // Fonction pour ajouter les gestionnaires d'événements aux cartes
-  function addEventListenersToCards() {
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => card.addEventListener('click', flipCard));
+function addEventListenersToCards() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => card.addEventListener('click', flipCard));
   }
 
 // Gestionnaire d'événements pour retourner une carte
-  function flipCard(event) {
-      if (flippedCards.length < 2) {
+function flipCard(event) {
+    if (flippedCards.length < 2) {
           let card = event.currentTarget;
           card.classList.toggle('flip');
           flippedCards.push(card);
@@ -100,8 +100,7 @@ function checkVictory() {
     const totalPairs = cardData.length / 2;
     if (score === totalPairs) {
         // Afficher le message de victoire
-        alert('Bravo, vous avez gagné!');
-        // Vous pouvez également ajouter une logique pour redémarrer le jeu si nécessaire
+        alert('Bravo, vous avez gagné !');
         restartGame();
     }
 }

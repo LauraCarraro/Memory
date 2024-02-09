@@ -3,9 +3,11 @@ Brief n°2 Création jeu de Memory Javascript
 
 Règles du jeu
 Au début du jeu toutes les faces des cartes sont cachées. 
-Le but est de retrouver les paires en ne retournant que deux cartes à la fois. 
-Si le joueur obtient les deux mêmes motifs, il remporte la paire puis rejoue. 
-S'il se trompe, il retourne les deux cartes faces cachées exactement au même endroit. 
+Le joueur retourne 2 cartes à la fois pour trouver une paire.
+Si le joueur obtient les deux mêmes motifs, il remporte 1 point
+et les 2 cartes disparaissent. 
+S'il se trompe, les 2 cartes sont retournées face cachée. 
+Le but du jeu est de trouver toutes les paires. 
 
 Javascript est utilisé pour :
 Récupérer les variables (section, bouton, score) et créer les 16 cartes du jeu
