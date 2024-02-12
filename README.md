@@ -17,7 +17,9 @@ Vérifier si les cartes sont identiques
 Si elles sont identiques elles disparaissent et le score s'incrémente de 1
 Si elles sont différentes elles se retournent face cachée
 Empêcher de cliquer sur une 3ème carte si 2 cartes sont déjà retournées (setTimeout)
-Remettre à jour le compteur de score
-Remettre à jour le tableau des cartes
+Remettre à jour le tableau des cartes quand on recommence le jeu
+Ajouter un score et un timer
+Quand la partie est finie, renvoyer un message "vous avez gagné
+en ... minutes et ... secondes"
 
 

@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalPairs = cardData.length / 2;
     if (score === totalPairs) {
       // Afficher le message de victoire
-      alert(`Bravo, vous avez gagné en ${minutes} minutes et ${seconds} secondes!`);
+      alert(`Bravo, vous avez gagné en ${minutes} minutes et ${seconds} secondes !`);
       restartGame();
     }
   }
