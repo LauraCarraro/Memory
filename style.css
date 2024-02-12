@@ -12,7 +12,6 @@ body {
 }
 .title {
     color: rgb(0, 0, 0);
-    margin-top: 20px;
     text-shadow: 1px 1px 1px white;
     font-family: 'Montserrat', sans-serif;
 }
@@ -51,7 +50,7 @@ section {
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform 1s;
-    transform: rotateY(180deg); /* Initially flipped */
+    transform: rotateY(180deg);
 }
 
 .front-face,
@@ -65,20 +64,20 @@ section {
 }
 
 .front-face {
-    transform: rotateY(180deg); /* Initially hidden */
+    transform: rotateY(180deg); 
 }
 
 .card.flip {
     transform: rotateY(0deg);
 }
 .front-face {
-    transform: rotateY(0deg); /* Initially hidden */
+    transform: rotateY(0deg); 
 }
 
 .card.flip .back-face {
-    display: none; /* backFace hidden when card is flipped */
+    display: none; 
 }
 
 .card.flip .front-face {
-    display: block; /* frontFace visible when card is flipped */
+    display: block; 
 }
