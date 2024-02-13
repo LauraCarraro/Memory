@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
       score += 1;
       updateScore();
       setTimeout(() => {
-        card1.style.display = 'none';
-        card2.style.display = 'none';
+        card1.style.visibility = 'hidden';
+        card2.style.visibility = 'hidden';
         checkVictory();
       }, 700);
     } else {
@@ -140,11 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
       updateTimerDisplay();
     }, 1000);
   }
-  //Mettre à jour le décompte du temps
+  //Mettre à jour le décompte du temps en gardant un zéro devant
+  //les chiffres inférieurs à 10
   function updateTimerDisplay() {
     minutesSpan.textContent = minutes < 10 ? '0' + minutes : minutes;
     secondsSpan.textContent = seconds < 10 ? '0' + seconds : seconds;
-}
+  }
   //Mettre à jour le score 
   function updateScore() {
     scoreSpan.textContent = score;
